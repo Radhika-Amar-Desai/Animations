@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Animation</title>
+		<style>
+			@keyframes move{
+				0%{
+					transform: rotate(360deg);
+					top : 50px; left : 0px;
+				}
+				25%{
+					transform: rotate(360deg);
+					top : 500px; left : 200px;
+				}
+				50%{
+					transform: rotate(360deg);
+					top : 50px; left : 400px;
+				}
+				75%{
+					transform: rotate(360deg);
+					top : 500px; left : 600px;
+				}
+				100%{
+					transform: rotate(360deg);
+					top : 50px; left : 800px;
+				}
+			}
+			@keyframes move-2{
+				0%{
+					transform: rotate(360deg);
+					top : 150px; left : 50px;
+					visibility:hidden;
+				}
+				25%{
+					transform: rotate(360deg);
+					top : 650px; left : 250px;
+					visibility:hidden;
+				}
+				50%{
+					transform: rotate(360deg);
+					top : 150px; left : 450px;
+					visibility:hidden;
+				}
+				75%{
+					transform: rotate(360deg);
+					top : 650px; left : 650px;
+					visibility:visible;
+				}
+				100%{
+					transform: rotate(360deg);
+					top : 150px; left : 850px;
+					visibility:visible;
+				}
+			}
+			.rect-1{
+				animation : move 4s linear 0s infinite alternate;
+			}
+			.rect-2{
+				animation: move-2 4s linear 0s infinite alternate;
+			}
+		</style>
+	</head>
+	<body>
+		<button style = "height:100px; width:100px; background-color:red; position:relative;border-radius:100%;font-size:40px;color:yellow;" class = "rect-1">
+			A
+		</button>
+		<button style = "height:100px; width:100px; background-color:red; position:relative;border-radius:100%;font-size:40px;color:yellow;" class = "rect-2">
+			B
+		</button>
+	</body>
+</html>
